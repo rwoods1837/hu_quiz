@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>HU Quiz</title>
+<style>body {font-size: 28px;}</style>
+<script>
+// 1. Finish the check function so that it checks all three answers.
+// 2. Then see if you can modify the quiz so it contains 5 questions.
+//     (Do not try to build a 30-question quiz here. There are more
+//      efficient ways to check lots of answers. We'll learn that
+//      next week.)
+// 3. Do some research. See if you can figure out a way to make the
+//    quiz not case-sensitive. (Try turning both the answer and the
+//    guess to lowercase before comparing them.)
+
+
+function check()
+{
+    var answer1 = "1074";
+    var answer2 = "8100";
+    var answer3 = "8114";
+    var answer4 = "1070";
+    var answer5 = "8104";
+
+    var guess1 = document.getElementById('one').value;
+    var guess2 = document.getElementById('two').value;
+    var guess3 = document.getElementById('three').value;
+    var guess4 = document.getElementById('four').value;
+    var guess5 = document.getElementById('five').value;
+
+    if (answer1 == guess1) {
+        document.getElementById('one').style.backgroundColor = "#88FF88";
+    }
+    else
+    {
+        document.getElementById('one').style.backgroundColor = "#FF0000";
+    }
+
+    if (answer2 == guess2) {
+        document.getElementById('two').style.backgroundColor = "#88FF88";
+    }
+    else
+    {
+        document.getElementById('two').style.backgroundColor = "#FF0000";
+    }
+
+    if (answer3 == guess3) {
+        document.getElementById('three').style.backgroundColor = "#88FF88";
+    }
+    else
+    {
+        document.getElementById('three').style.backgroundColor = "#FF0000";
+    }
+
+    if (answer4 == guess4) {
+        document.getElementById('four').style.backgroundColor = "#88FF88";
+    }
+    else
+    {
+        document.getElementById('four').style.backgroundColor = "#FF0000";
+    }
+
+    if (answer5 == guess5) {
+        document.getElementById('five').style.backgroundColor = "#88FF88";
+    }
+    else
+    {
+        document.getElementById('five').style.backgroundColor = "#FF0000";
+    }
+}
+</script>
+</head>
+
+<body>
+<h1>Ryan's Heritage Units Quiz</h1>
+<form>
+<p>Enter the names of the five heritage units I have seen (in order, and use the number of the locomotive):</p>
+
+<p>
+#1: <input type="text" id="one"> <br>
+#2: <input type="text" id="two"> <br>
+#3: <input type="text" id="three"> <br>
+#4: <input type="text" id="four"> <br>
+#5: <input type="text" id="five">
+</p>
+
+<input type="button" onclick="check()" value="Check it!">
+
+</form>
+
+</body>
+</html>
